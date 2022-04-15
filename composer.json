@@ -1,0 +1,31 @@
+{
+    "name": "blitz-php/app-skeleton",
+    "description": "Skeleton App for Blitz framework",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dimitri Sitchet Tomkeu",
+            "email": "dimitrisitchet@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../blitz/framework",
+            "options": {
+                "symlink": false
+            }
+        }
+    ],
+    "require": {
+        "blitz-php/framework": "@dev"
+    }
+    
+}
