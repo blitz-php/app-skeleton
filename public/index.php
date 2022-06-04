@@ -1,9 +1,5 @@
 <?php
 
-use BlitzPHP\Application;
-use BlitzPHP\Http\ServerRequest;
+$app = require_once __DIR__ . DIRECTORY_SEPARATOR . '.bootstrap.php';
 
-$app = new Application();
-
-$response = $app->run( ServerRequest::fromGlobals() );
-
+$app->run();
