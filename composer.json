@@ -25,7 +25,8 @@
         }
     ],
     "require": {
-        "blitz-php/framework": "@dev"
+        "blitz-php/framework": "@dev",
+        "twig/twig": "3.x-dev"
     }
     
 }
