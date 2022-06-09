@@ -49,6 +49,13 @@ return [
     */
     'show_debugbar' => 'auto',
 
+    /**
+     * Specificie si on doit compresser le code de la vue avant de l'afficher ou pas
+     *   - True / False
+     *   - auto : Le systeme compressera le code uniquement si vous passez dans un environement de production
+     */
+    'compress_output' => 'auto',
+
     /** 
      * Specifie si les liens doivent etre en absolue (avec le nom de domaine) ou en relatif
      */
