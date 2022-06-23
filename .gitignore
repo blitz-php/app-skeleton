@@ -106,3 +106,8 @@ nb-configuration.xml
 /.phpunit.*.cache
 
 /.php-cs-fixer.php
+
+# Blitz
+**/logs/**
+**/debugbar/**
+**/cache/**

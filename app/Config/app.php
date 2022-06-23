@@ -42,13 +42,6 @@ return [
     */
     'environment' => env('ENVIRONMENT', 'auto'),
 
-    /*
-    | Specifie si on doit afficher la debugbar ou pas
-    | 	- True / False
-    |	- auto : Le systeme affichera la debugbar uniquement dans un environnement de development
-    */
-    'show_debugbar' => 'auto',
-
     /** 
      * Specifie si les liens doivent etre en absolue (avec le nom de domaine) ou en relatif
      */
