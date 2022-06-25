@@ -73,27 +73,27 @@ require_once $composer_autoload_file;
 /**
  * Chemin d'acces du dossier "composer"
  */
-define('COMPOSER_PATH', rtrim(pathinfo($composer_autoload_file, PATHINFO_DIRNAME), DS) . DS);
+define('COMPOSER_PATH', realpath(pathinfo($composer_autoload_file, PATHINFO_DIRNAME)) . DS);
 
 /**
  * Chemin vers le framework
  */
-define('SYST_PATH', COMPOSER_PATH.'blitz-php'.DS.'framework'.DS.'src'.DS);
+define('SYST_PATH', COMPOSER_PATH . 'blitz-php' . DS . 'framework' . DS . 'src' . DS);
 
 /**
  * Chemin vers l'application
  */
-define('APP_PATH', rtrim($app_path, '/\\').DS);
+define('APP_PATH', realpath($app_path) . DS);
 
 /**
  * Chemin vers le dossier de stockage
  */
-define('STORAGE_PATH', rtrim($storage_path, '/\\').DS);
+define('STORAGE_PATH', realpath($storage_path) . DS);
 
 /**
  * Chemin vers le repertoire publique
  */
-define('WEBROOT', __DIR__.DS);
+define('WEBROOT', __DIR__ . DS);
 
 /**
  * URL de base
