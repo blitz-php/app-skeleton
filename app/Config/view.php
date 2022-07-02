@@ -35,6 +35,13 @@ return [
      */
     'view_base' => VIEW_PATH,
 
+    /**
+     * Specifie si on doit stocker des informations sur les performances ou non
+     * 
+     * @var bool|'auto' Si auto, le systeme stockera les informations de performances uniquement dans un environnement de developpement
+     */
+    'debug' => 'auto',
+
     'adapters' => [
         /**
          * [Configuration Native]
