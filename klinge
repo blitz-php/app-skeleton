@@ -40,6 +40,4 @@ if (is_int($suppress = array_search('--no-header', $_SERVER['argv'], true))) {
 }
 $console = new \BlitzPHP\Cli\Console\Console($suppress);
 
-$console->registerCommands();
-
 $console->handle($_SERVER['argv']);
