@@ -55,7 +55,7 @@ return [
     /**
      * @var array<string, string>
      */
-    'fields'          => [
+    'field'          => [
         /**
          * Le nom du champ pour le 'statut' dans la réponse
          */
