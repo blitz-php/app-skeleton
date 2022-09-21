@@ -15,17 +15,11 @@
             "App\\": "app/"
         }
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../../blitz/framework",
-            "options": {
-                "symlink": false
-            }
-        }
-    ],
     "require": {
-        "blitz-php/framework": "@dev"
+        "blitz-php/framework": "dev-main"
+    },
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
     }
-    
 }
