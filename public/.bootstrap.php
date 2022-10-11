@@ -5,10 +5,12 @@ define('DS', DIRECTORY_SEPARATOR);
 $config = require_once __DIR__ . DS . '.bootstrap.config.php';
 
 foreach ($config As $key => $value) {
-    $config[$key] = __DIR__.DS.trim($value, '/');
+    $config[$key] = __DIR__ . DS . trim($value, '/');
 }
-extract($config);
 
+$app_path               = $config['app_path'] ?? '';
+$storage_path           = $config['storage_path'] ?? '';
+$composer_autoload_file = $config['composer_autoload_file'] ?? '';
 
 // Le chemin d'accès vers le dossier de l'application
 if (is_dir($app_path)) {
