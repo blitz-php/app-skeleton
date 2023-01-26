@@ -1,14 +1,12 @@
 <?php
 
-/*
-| -------------------------------------------------------------------
-| REST SETTINGS OF APPLICATION
-| -------------------------------------------------------------------
-| This file will contain the configurations of REST component for creation your web services.
-|
-| For complete instructions please consult the 'Rest Configuration' in User Guide.
-|
-*/
+/**
+ * ------------------------------------------------- -------------------------
+ * Configuration des API REST
+ * ------------------------------------------------- -------------------------
+ *
+ * Ce fichier vous permet de definir le fonctionnement de vos controleurs REST
+ */
 
 return [
     /**

@@ -1,4 +1,12 @@
-<?php 
+<?php
+
+/**
+ * ------------------------------------------------- -------------------------
+ * Configuration du gestionnaire de cache
+ * ------------------------------------------------- -------------------------
+ *
+ * Ce fichier vous permet de definir les parametres de gestion du cache de votre application
+ */
 
 return [
     /**

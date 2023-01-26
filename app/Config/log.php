@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * ------------------------------------------------- -------------------------
+ * Configuration des log
+ * ------------------------------------------------- -------------------------
+ *
+ * Ce fichier vous permet de definir comment votre application doit traiter les log
+ */
 
 return [
     /**
