@@ -42,14 +42,14 @@ if (!is_file($paths['composer'])) {
 require_once $paths['composer'];
 
 /**
- * Chemin d'acces du dossier "composer"
+ * Chemin d'acces du dossier "vendor"
  */
-define('COMPOSER_PATH', realpath(pathinfo($paths['composer'], PATHINFO_DIRNAME)) . DS);
+define('VENDOR_PATH', realpath(pathinfo($paths['composer'], PATHINFO_DIRNAME)) . DS);
 
 /**
  * Chemin vers le framework
  */
-define('SYST_PATH', COMPOSER_PATH . 'blitz-php' . DS . 'framework' . DS . 'src' . DS);
+define('SYST_PATH', VENDOR_PATH . 'blitz-php' . DS . 'framework' . DS . 'src' . DS);
 
 /**
  * Chemin vers le repertoire publique
