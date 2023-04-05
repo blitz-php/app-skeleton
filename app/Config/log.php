@@ -222,7 +222,7 @@ return [
         //     /**
         //      * L'email qui recevera le rapport d'erreur
         //      *
-        //      * @var string
+        //      * @var string|array
         //      * @required
         //      */
         //     'to' => '',
@@ -258,7 +258,7 @@ return [
 
         /*
          * --------------------------------------------------------------------
-         * Envoi les log par mails
+         * Envoi les log par telegram
          * --------------------------------------------------------------------
          */
         // 'telegram' => [

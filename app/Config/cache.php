@@ -45,7 +45,12 @@ return [
      * @var array<string, string>
      */
     'valid_handlers' => [
+        'apcu'      => \BlitzPHP\Cache\Handlers\Apcu::class,
+        'array'     => \BlitzPHP\Cache\Handlers\ArrayHandler::class,
         'dummy'     => \BlitzPHP\Cache\Handlers\Dummy::class,
         'file'      => \BlitzPHP\Cache\Handlers\File::class,
+        'memcached' => \BlitzPHP\Cache\Handlers\Memcached::class,
+        'redis'     => \BlitzPHP\Cache\Handlers\RedisHandler::class,
+        'wincache'  => \BlitzPHP\Cache\Handlers\Wincache::class,
     ],
 ];
