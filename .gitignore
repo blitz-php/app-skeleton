@@ -111,3 +111,4 @@ nb-configuration.xml
 **/logs/**
 **/debugbar/**
 **/cache/**
+/storage/framework/session
