@@ -46,11 +46,18 @@ return [
     'template' => 'email',
 
     /**
+     * DSN du serveur de mail
+     * 
+     * @var string
+     */
+    'dsn' => env('mail.dsn', ''),
+    
+    /**
      * Le protocole d'envoi du mail: mail, sendmail, smtp, qmail (phpmailer)
      * 
      * @var string
      */
-    'protocol' => env('mail.protocol', 'mail'),
+    'protocol' => env('mail.protocol', \BlitzPHP\Mail\Mail::PROTOCOL_SENDMAIL),
 
     /**
      * Adresse du serveur SMTP
@@ -92,7 +99,7 @@ return [
      * 
      * @var string
      */
-    'encryption' => env('mail.encryption', 'tls'),
+    'encryption' => env('mail.encryption', \BlitzPHP\Mail\Mail::ENCRYPTION_TLS),
 
     /**
      *Type de mail par defaut, soit 'text' ou 'html'
@@ -104,12 +111,12 @@ return [
     /**
      * Jeu de caractères (utf-8, iso-8859-1, etc.)
      */
-    'charset' => 'UTF-8',
+    'charset' => env('mail.charset', \BlitzPHP\Mail\Mail::CHARSET_UTF8),
 
     /**
      * Priorité d'email. 1 = le plus haut. 5 = le plus bas. 3 = normal
      * 
      * @var int
      */
-    'priority' => 3,
+    'priority' => \BlitzPHP\Mail\Mail::PRIORITY_NORMAL,
 ];
