@@ -16,8 +16,7 @@
         }
     },
     "require": {
-        "blitz-php/database": "dev-main",
-        "blitz-php/framework": "dev-main"
+        "blitz-php/framework": "^0.3"
     },
     "prefer-stable": true,
     "config": {
