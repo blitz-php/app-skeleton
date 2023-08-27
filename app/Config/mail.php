@@ -43,7 +43,7 @@ return [
      * 
      * @var string
      */
-    'template' => 'email',
+    'template' => '',
 
     /**
      * DSN du serveur de mail
@@ -85,7 +85,7 @@ return [
      * 
      * @var int
      */
-    'port' => env('email.port', 25),
+    'port' => (int) env('mail.port', 25),
 
     /**
      * Timeout SMTP (en secondes)
@@ -99,7 +99,7 @@ return [
      * 
      * @var string
      */
-    'encryption' => env('mail.encryption', \BlitzPHP\Mail\Mail::ENCRYPTION_TLS),
+    'encryption' => env('mail.encryption', \BlitzPHP\Mail\Mail::ENCRYPTION_NONE),
 
     /**
      *Type de mail par defaut, soit 'text' ou 'html'

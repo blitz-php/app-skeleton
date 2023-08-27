@@ -29,11 +29,9 @@ return [
      * can also be renamed or relocated anywhere on your server. If
      * you do, use a full server path.
      *
-     * @see http://codeigniter.com/user_guide/general/managing_apps.html
-     * 
-     * @var string
+    * @var string
      */
-    'app' => __DIR__ . '/../',
+    'app' => dirname(__DIR__),
     
     /**
      * ------------------------------------------------- -------------------------
@@ -48,7 +46,7 @@ return [
      * for maximum security, keeping it out of the app and/or
      * system directories.
      */
-    'storage' => __DIR__ . '/../../storage/',
+    'storage' => dirname(__DIR__, 2) . '/storage/',
     
     /**
      * ------------------------------------------------- -------------------------
@@ -63,7 +61,7 @@ return [
      * for maximum security, keeping it out of the app and/or
      * system directories.
      */
-    'upload' => __DIR__ . '/../../uploads/',
+    'upload' => dirname(__DIR__, 2) . '/uploads/',
     
     /**
      * ------------------------------------------------- -------------------------
@@ -72,5 +70,5 @@ return [
      *
      * Repertoire votre dossier de dependances installées via composer "vendor".
      */
-    'composer' => __DIR__ . '/../../vendor/',
+    'composer' => dirname(__DIR__, 2) . '/vendor/',
 ];

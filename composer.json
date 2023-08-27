@@ -16,10 +16,15 @@
         }
     },
     "require": {
-        "blitz-php/framework": "^0.3"
+        "blitz-php/framework": "^0.5"
     },
     "prefer-stable": true,
     "config": {
         "sort-packages": true
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "BlitzPHP\\Initializer\\ComposerScripts::postUpdate"
+        ]
     }
 }
