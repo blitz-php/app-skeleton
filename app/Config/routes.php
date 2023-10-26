@@ -15,4 +15,4 @@
  * Définition des routes
  * --------------------------------------------------------------------
  */
-$routes->get('/', 'HomeController::index');
+$routes->view('/', 'welcome');

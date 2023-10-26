@@ -89,4 +89,32 @@ return [
     'helpers' => [
         'path'
     ],
+
+    /**
+     * Configuration de cohesion entre l'autoloader de BlitzPHP et celui de Composer
+     */
+    'composer' => [
+        /**
+         * La liste des packages Composer pour la découverte automatique
+         * Ce paramètre est facultatif.
+         *
+         * Ex.:
+         *   [
+         *       'only' => [
+         *           // Répertoriez tous les packages à découvrir automatiquement
+         *           'blitz-php/schild',
+         *       ],
+         *   ]
+         *   or
+         *   [
+         *       'exclude' => [
+         *           // Répertoriez les packages à exclure.
+         *           'pestphp/pest',
+         *       ],
+         *   ]
+         *
+         * @var array
+         */
+        'packages' => []
+    ],
 ];

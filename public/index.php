@@ -20,8 +20,8 @@ $paths = require_once $paths_config_file;
 // Le chemin d'accès vers composer
 if (empty($paths['composer']) || (!is_dir($paths['composer']) && !is_file($paths['composer']))) {
     header('HTTP/1.1 503 Service Unavailable.', true, 503);
-    echo 'Your composer autoload file does not appear to be set correctly. ';
-    echo 'Please open the following file and correct this: "' . $paths_config_file . '"';
+    echo 'Votre fichier autoload de Composer ne semble pas être défini correctement. ';
+    echo 'Veuillez ouvrir le fichier suivant et pour corriger: "' . $paths_config_file . '"';
     exit(3); // EXIT_CONFIG
 }
 
@@ -34,8 +34,8 @@ if (!is_file($paths['composer'])) {
 }
 if (!is_file($paths['composer'])) {
     header('HTTP/1.1 503 Service Unavailable.', true, 503);
-    echo 'Your composer autoload file does not appear to be set correctly. ';
-    echo 'Please open the following file and correct this: "' . $paths_config_file . '"';
+    echo 'Votre fichier autoload de Composer ne semble pas être défini correctement. ';
+    echo 'Veuillez ouvrir le fichier suivant et pour corriger: "' . $paths_config_file . '"';
     exit(3); // EXIT_CONFIG
 }
 

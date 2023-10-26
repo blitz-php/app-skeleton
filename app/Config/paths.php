@@ -7,13 +7,11 @@
  *
  * Ce fichier vous permet de definir le chemins où se trouveront les élements nécessaires à l'éxecution du programme
  * 
- * Holds the paths that are used by the system to
- * locate the main directories, app, system, etc.
+ * Contient les chemins utilisés par le système pour localiser les répertoires principaux, l'application, le système, etc.
  *
- * Modifying these allows you to restructure your application,
- * share a system folder between multiple applications, and more.
+ * Les modifier vous permet de restructurer votre application, de partager un dossier système entre plusieurs applications, et bien plus encore.
  *
- * All paths are relative to the project's root folder.
+ * Tous les chemins sont relatifs au dossier racine du projet.
  */
 
 return [
@@ -24,14 +22,13 @@ return [
      *
      * Repertoire où sont stockés les fichiers de votre application
      * 
-     * If you want this front controller to use a different "app"
-     * folder than the default one you can set its name here. The folder
-     * can also be renamed or relocated anywhere on your server. If
-     * you do, use a full server path.
+     * Si vous souhaitez que ce contrôleur frontal utilise un dossier « app » différent de celui par défaut, vous pouvez définir son nom ici.
+     * Le dossier peut également être renommé ou déplacé n'importe où sur votre serveur.
+     * Si vous le faites, utilisez un chemin de serveur complet.
      *
     * @var string
      */
-    'app' => dirname(__DIR__),
+    'app' => __DIR__ . '/../',
     
     /**
      * ------------------------------------------------- -------------------------
@@ -40,13 +37,12 @@ return [
      *
      * Repertoire où sont stockés les fichiers statique générés par l'application (cache, log, migrations...)
      * 
-     * This variable must contain the name of your "storage" directory.
-     * The storage directory allows you to group all directories that
-     * need write permission to a single place that can be tucked away
-     * for maximum security, keeping it out of the app and/or
-     * system directories.
+     * Cette variable doit contenir le nom de votre répertoire "storage".
+     * Le répertoire de stockage vous permet de regrouper tous les répertoires nécessitant une autorisation 
+     * d'écriture dans un seul endroit qui peut être rangé pour une sécurité maximale, 
+     * en les gardant hors de l'application et/ou des répertoires système.
      */
-    'storage' => dirname(__DIR__, 2) . '/storage/',
+    'storage' => __DIR__ . '/../../storage/',
     
     /**
      * ------------------------------------------------- -------------------------
@@ -54,14 +50,8 @@ return [
      * ---------------------------------------------------------------
      *
      * Repertoire où sont stockés les fichiers téléchargés par les utilisateurs de l'application (images, videos, pdf...)
-     * 
-     * This variable must contain the name of your "storage" directory.
-     * The storage directory allows you to group all directories that
-     * need write permission to a single place that can be tucked away
-     * for maximum security, keeping it out of the app and/or
-     * system directories.
      */
-    'upload' => dirname(__DIR__, 2) . '/uploads/',
+    'upload' => __DIR__ . '/../../uploads/',
     
     /**
      * ------------------------------------------------- -------------------------
@@ -70,5 +60,5 @@ return [
      *
      * Repertoire votre dossier de dependances installées via composer "vendor".
      */
-    'composer' => dirname(__DIR__, 2) . '/vendor/',
+    'composer' => __DIR__ . '/../../vendor/',
 ];

@@ -22,7 +22,8 @@ return [
     /**
      * Specifie si on doit compresser le code html final ou pas avant de l'envoyer au navigateur
      * 
-     * @var bool|'auto' Si auto, le systeme compressera le code uniquement si vous passez dans un environement de production
+     * @var bool|'auto'|Closure Si auto, le systeme compressera le code uniquement si vous passez dans un environement de production.
+     *                          Peut egalement etre une closure qui renvoie un boolean ou la chaine 'auto'.
      */
     'compress_output' => 'auto',
 
@@ -41,6 +42,24 @@ return [
      * @var bool|'auto' Si auto, le systeme stockera les informations de performances uniquement dans un environnement de developpement
      */
     'debug' => 'auto',
+
+    /**
+     * Données partagées à toutes les vues
+     */
+    'shared' => function(): array {
+        return [
+
+        ];
+    },
+
+    /**
+     * Les decorateurs de vues sont des méthodes de classe qui seront exécutées en séquence pour avoir la possibilité de modifier la sortie générée juste avant la mise en cache des résultats.
+     *
+     * Toutes les classes doivent implémenter CodeIgniter\View\ViewDecoratorInterface
+     *
+     * @var classe-string<ViewDecoratorInterface>[]
+      */
+    'decorators' => [],
 
     'adapters' => [
         /**

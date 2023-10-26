@@ -14,7 +14,7 @@ return [
      *
      * @phpstan-var class-string<BaseHandler>
      */
-    'handler' => \BlitzPHP\Session\Handlers\File::class,
+    'handler' => env('session.driver', \BlitzPHP\Session\Handlers\File::class),
 
     /**
      * ------------------------------------------------- -------------------------
@@ -25,7 +25,7 @@ return [
      * 
      * @var string
      */
-    'cookie_name' => 'blitz_session',
+    'cookie_name' => env('session.cookieName', 'blitz_session'),
 
     /**
      * ------------------------------------------------- -------------------------
@@ -37,7 +37,7 @@ return [
      * 
      * @var int
      */
-    'expiration' => 7200,
+    'expiration' => env('session.expiration', 7200),
 
     /**
      * ------------------------------------------------- -------------------------
@@ -56,7 +56,7 @@ return [
      * 
      * @var string
      */
-    'savePath' => FRAMEWORK_STORAGE_PATH . 'session',
+    'savePath' => env('session.savePath', FRAMEWORK_STORAGE_PATH . 'session'),
 
     /**
      * ------------------------------------------------- -------------------------
@@ -70,7 +70,7 @@ return [
      * 
      * @var bool
      */
-    'matchIP' => false,
+    'matchIP' => env('session.matchIP', false),
 
     /**
      * ------------------------------------------------- -------------------------
@@ -81,7 +81,7 @@ return [
      * 
      * @var int
      */
-    'time_to_update' => 300,
+    'time_to_update' => env('session.timeToUpdate', 300),
 
     /**
      * ------------------------------------------------- -------------------------
@@ -94,7 +94,7 @@ return [
      * 
      * @var bool
      */
-    'regenerate_destroy' => false,
+    'regenerate_destroy' => env('session.regenerateDestroy', false),
 
     /**
      * ------------------------------------------------- -------------------------

@@ -47,16 +47,10 @@ return [
      *
      * Ce paramètre est passé à la classe Router et géré là-bas.
      *
-     * Si vous souhaitez utiliser une fermeture, vous devez la définir dans le constructeur de classe ou le fichier itinéraires en appelant :
-     *
-     * $routes->set404Override(function() {
-     *    // Do something here
-     * });
-     *
      * Example:
-	 * 	'override404' => 'App\Errors::show404',
+	 * 	'fallback' => 'App\Errors::show404',
      */
-	'override404' => null,
+	'fallback' => null,
 
     /**
      * Si TRUE, le système tentera de faire correspondre l'URI a un contrôleur

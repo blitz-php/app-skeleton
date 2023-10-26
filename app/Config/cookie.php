@@ -16,7 +16,7 @@ return [
      * 
      * @var string
      */
-    'prefix' => '',
+    'prefix' => env('cookie.prefix', ''),
 
     /**
      * ------------------------------------------------- -------------------------
@@ -29,7 +29,7 @@ return [
      *
      * @var DateTimeInterface|int|string
      */
-    'expires' => 0,
+    'expires' => env('cookie.expires', 0),
     
     /** 
      * --------------------------------------------------------------------------
@@ -40,7 +40,7 @@ return [
      * 
      * @var string
      */
-    'path' => '/',
+    'path' => env('cookie.path', '/'),
 
     /**
      * --------------------------------------------------------------------------
@@ -51,7 +51,7 @@ return [
      * 
      * @var string
      */
-    'domain' => '',
+    'domain' => env('cookie.domain', ''),
 
     /**
      * --------------------------------------------------------------------------
@@ -62,7 +62,7 @@ return [
      * 
      * @var bool
      */
-    'secure' => false,
+    'secure' => env('cookie.secure', false),
 
     /**
      * --------------------------------------------------------------------------
@@ -73,7 +73,7 @@ return [
      * 
      * @var bool
      */
-    'httponly' => true,
+    'httponly' => env('cookie.httponly', true),
 
     /**
      * --------------------------------------------------------------------------
@@ -97,7 +97,7 @@ return [
      * 
      * @var string
      */
-    'samesite' => 'Lax',
+    'samesite' => env('cookie.samesite', 'Lax'),
 
     /**
      * --------------------------------------------------------------------------
@@ -115,5 +115,5 @@ return [
      * 
      * @var bool
      */
-    'raw' => false,
+    'raw' => env('cookie.raw', false),
 ];
