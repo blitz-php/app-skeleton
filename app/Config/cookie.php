@@ -87,7 +87,7 @@ return [
      * - ''
      *
      * Alternativement, vous pouvez utiliser les noms de constante :
-     * - `Cookie ::SAMESITE_NONE`
+     * - `Cookie::SAMESITE_NONE`
      * - `Cookie::SAMESITE_LAX`
      * - `Cookie::SAMESITE_STRICT`
      *

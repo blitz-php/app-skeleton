@@ -111,7 +111,7 @@ return [
      * Si vrai, cela forcera chaque demande faite à cette application à être
      * via une connexion sécurisée (HTTPS). Si la demande entrante n'est pas
      * sécurisée, l'utilisateur sera redirigé vers une version sécurisée de la page
-     * et l'en-tête HTTP Strict Transport Security sera défini.
+     * et l'en-tête HTTP Strict Transport Security (HSTS) sera défini.
      */
     'force_global_secure_requests' => false,
 ];

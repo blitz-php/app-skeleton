@@ -18,7 +18,7 @@ return [
      * 
      * @var string
      */
-    'key' => '',
+    'key' => env('encryption.key', ''),
 
     /**
      * --------------------------------------------------------------------------
@@ -33,7 +33,7 @@ return [
      * 
      * @var string
      */
-    'driver' => 'OpenSSL',
+    'driver' => env('encryption.driver', 'OpenSSL'),
 
     /**
      * --------------------------------------------------------------------------
@@ -46,7 +46,7 @@ return [
      * 
      * @var int
      */
-    'block_size' => 16,
+    'block_size' => (int) env('encryption.blockSize', 16),
 
     /**
      * --------------------------------------------------------------------------
@@ -57,7 +57,7 @@ return [
      * 
      * @var string
      */
-    'digest' => 'SHA512',
+    'digest' => env('encryption.digest', 'SHA512'),
 
     /**
      * Indique si le texte chiffré doit être brut. S'il est défini sur false, il sera codé en base64.

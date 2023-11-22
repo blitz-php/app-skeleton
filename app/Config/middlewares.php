@@ -15,7 +15,9 @@ return [
      * @var array<string, string>
      */
     'aliases' => [
-
+        'body-parser'   => \BlitzPHP\Middlewares\BodyParser::class,
+        'cors'          => \BlitzPHP\Middlewares\Cors::class,
+        'secureheaders' => \BlitzPHP\Middlewares\SecureHeaders::class,
     ],
 
     /**
@@ -24,7 +26,9 @@ return [
      * @var array<string|Closure|class-string>
      */
     'globals' => [
- 
+        \BlitzPHP\Middlewares\ForceHTTPS::class, // Forcer les requêtes sécurisées globales
+        \BlitzPHP\Middlewares\PageCache::class, // Mise en cache des pages Web
+        \BlitzPHP\Middlewares\PerformanceMetrics::class, // Mesures de performances
     ],
 
     /**
@@ -34,6 +38,5 @@ return [
      */
     'build' => function (Middleware $middleware) {
         
-        // $middleware->insertBefore('app', 'body-parser');
     },
 ];

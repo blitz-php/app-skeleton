@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= config('app.language', 'fr') ?>">
 <head>
 	<meta charset="UTF-8">
 	<title>Bienvenue sur BlitzPHP <?= \BlitzPHP\Core\Application::VERSION ?></title>
@@ -291,6 +291,13 @@
 <!-- FOOTER: DEBUG INFO + COPYRIGHTS -->
 
 <footer>
+	<div class="environment">
+
+		<p>Page rendue en {elapsed_time} secondes en utilisant {memory_usage} Mo de mémoire.</p>
+		<p>Environnement: <?= environment() ?></p>
+
+	</div>
+
 	<div class="copyrights">
 
 		<p>&copy; <?= date('Y') ?> Dimtrov Labs. BlitzPHP est un projet open source distribué sous licence MIT.</p>
