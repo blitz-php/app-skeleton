@@ -55,9 +55,9 @@ return [
     /**
      * Les decorateurs de vues sont des méthodes de classe qui seront exécutées en séquence pour avoir la possibilité de modifier la sortie générée juste avant la mise en cache des résultats.
      *
-     * Toutes les classes doivent implémenter CodeIgniter\View\ViewDecoratorInterface
+     * Toutes les classes doivent implémenter BlitzPHP\View\ViewDecoratorInterface
      *
-     * @var classe-string<ViewDecoratorInterface>[]
+     * @var classe-string<\BlitzPHP\View\ViewDecoratorInterface>[]
       */
     'decorators' => [],
 
@@ -87,10 +87,15 @@ return [
         /**
          * [Configuration Blade](https://laravel.com/docs/9.x/views)
          * 
-         * executer `composer require beebmx/blade`
-         * require beebmx/blade
+         * executer `composer require jenssegers/blade`
+         * require jenssegers/blade
          */
         'blade' => [
+            // /**
+            //  * Extension de fichier de vues
+            //  */
+            // 'extension' => 'blade.php',
+
             // /**
             //  * Répertoire où sont stockés les caches de vues
             //  * 
@@ -111,6 +116,14 @@ return [
             //  * @var array<string, callable>
             //  */
             // 'if' => [],
+
+            //  /**
+            //   * Fonction de configuration manuelle du moteur de template
+            //   */
+            // 'configure' => function (\Jenssegers\Blade\Blade $engine): \Jenssegers\Blade\Blade {
+
+            //     return $engine;
+            // },
         ],
 
         /**
@@ -139,7 +152,7 @@ return [
             // 'temp_path' => TEMP_PATH . 'views',
 
             //  /**
-            //   * Fonction de comfiguration manuelle du moteur de template
+            //   * Fonction de configuration manuelle du moteur de template
             //   */
             // 'configure' => function (\Latte\Engine $engine): \Latte\Engine {
 
@@ -167,7 +180,7 @@ return [
             // 'functions' => [],
 
             // /**
-            //  * Fonction de comfiguration manuelle du moteur de template
+            //  * Fonction de configuration manuelle du moteur de template
             //  */
             // 'configure'     => function(\League\Plates\Engine $engine) : \League\Plates\Engine {
 
@@ -220,7 +233,7 @@ return [
             //  * 
             //  * @var int
             //  */
-			// 'cache_lifetime' => 300,
+			// 'cache_lifetime' => 5 * MINUTE,
 
             // /**
             //  * Mettre à jour les modèles de cache à chaque appel ?
@@ -258,7 +271,7 @@ return [
             // 'compile_check'  => on_dev(),
 
             // /**
-            //  * Fonction de comfiguration manuelle du moteur de template
+            //  * Fonction de configuration manuelle du moteur de template
             //  */
             // 'configure'     => function(\Smarty $engine) : \Smarty {
 
@@ -342,7 +355,7 @@ return [
             // 'functions' => [],
 
             // /**
-            //  * Fonction de comfiguration manuelle du moteur de template
+            //  * Fonction de configuration manuelle du moteur de template
             //  */
             // 'configure'     => function(\Twig\Environment $engine) : \Twig\Environment {
 

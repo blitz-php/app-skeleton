@@ -1,6 +1,6 @@
 <?php
 
-use BlitzPHP\Http\Middleware;
+use BlitzPHP\Http\MiddlewareQueue;
 
 /**
  * ------------------------------------------------- -------------------------
@@ -36,7 +36,7 @@ return [
      * 
      * @var Closure
      */
-    'build' => function (Middleware $middleware) {
+    'build' => function (MiddlewareQueue $queue) {
         
     },
 ];
