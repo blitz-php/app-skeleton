@@ -71,6 +71,12 @@ return [
 	'prioritize' => false,
 
     /**
+     * Pour les routes définies.
+     * Si VRAI, les segments d'URI multiples correspondants seront passés en un seul paramètre.
+     */
+    'multiple_segments_one_param' => false,
+
+    /**
      * Carte des segments URI et des namespace. Pour l'Auto Routing. 
 	 * 
 	 * La clé est le premier segment URI. La valeur est le namespace de contrôleur. 
@@ -83,4 +89,13 @@ return [
      * @var array [ uri_segment => namespace ]
      */
 	'module_routes' => [],
+
+    /**
+     * Pour le routage automatique.
+     * Si les tirets dans les URIs pour les contrôleurs/méthodes doivent être traduits en CamelCase.
+     * Par exemple, blog-controller -> BlogController
+     *
+     * Si vous activez ceci, `translate_uri_dashes` est ignoré.
+     */
+    'translate_uri_to_camel_case' => true,
 ];

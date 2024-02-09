@@ -95,6 +95,18 @@ return [
      */
     'composer' => [
         /**
+         * --------------------------------------------------------------------------
+         * Activer la découverte automatique dans les paquets Composer ?
+         * --------------------------------------------------------------------------
+         *
+         * Si c'est le cas, la découverte automatique se fera dans tous les namespaces chargés par Composer, 
+         * ainsi que dans les namespaces configurés localement.
+         *
+         * @var bool
+         */
+        'discover' => true,
+
+        /**
          * La liste des packages Composer pour la découverte automatique
          * Ce paramètre est facultatif.
          *
@@ -113,7 +125,7 @@ return [
          *       ],
          *   ]
          *
-         * @var array
+         * @var array{only?: list<string>, exclude?: list<string>}
          */
         'packages' => []
     ],

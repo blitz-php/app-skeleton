@@ -30,11 +30,10 @@ return [
 
     /**
      * ------------------------------------------------- -------------------------
-     * Format de date pour les journaux
+     * Processeurs de logs
      * ------------------------------------------------- -------------------------
      *
-     * Chaque élément enregistré a une date associée. Vous pouvez utiliser la date PHP
-     * codes pour définir votre propre format de date
+     * Les processeurs permettent d'ajouter des données supplémentaires pour tous les enregistrements.
      * 
      * @var string[]
      */
