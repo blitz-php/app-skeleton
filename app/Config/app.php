@@ -29,6 +29,8 @@ return [
     */
     'base_url' => env('app.baseURL', ''),
 
+    'name' => env('app.name', 'BlitzPHP'),
+
     /*
     | Cette option permet d'ajouter un suffixe à toutes les URL générées par le framework
     | Pour plus d'informations, veuillez consulter le guide de l'utilisateur :
