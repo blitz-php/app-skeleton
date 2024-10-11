@@ -29,7 +29,14 @@ return [
     */
     'base_url' => env('app.baseURL', ''),
 
-    'name' => env('app.name', 'BlitzPHP'),
+    /*
+    | Nom de l'application
+    |
+    | Cette valeur est le nom de votre application. 
+	| Cette valeur est utilisée lorsque le framework doit placer le nom de l'application 
+	| dans une notification ou à un autre endroit requis par l'application ou ses paquets.
+    */
+    'name' => env('app.name', 'Application'),
 
     /*
     | Cette option permet d'ajouter un suffixe à toutes les URL générées par le framework
@@ -48,6 +55,26 @@ return [
      * Specifie si les liens doivent etre en absolue (avec le nom de domaine) ou en relatif
      */
     'use_absolute_link' => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Caractères d'URL autorisés
+    |--------------------------------------------------------------------------
+    |
+    | Cette option vous permet de spécifier les caractères autorisés dans vos URL.
+    | Si quelqu'un tente de soumettre une URL contenant des caractères non autorisés, il recevra un message d'avertissement.
+    |
+    | Par mesure de sécurité, nous vous encourageons vivement à limiter les URL à un nombre de caractères aussi réduit que possible.
+    |
+    | Par défaut, seuls les caractères suivants sont autorisés : `a-z 0-9~%.:_-`
+    |
+    | Vous pouvez définir une chaîne vide pour autoriser tous les caractères, mais seulement si vous êtes fou.
+    |
+    | La valeur configurée est en fait un groupe de caractères d'expression régulière et sera utilisée comme suit : '/\A[<permitted_uri_chars>]+\z/iu'
+    |
+    | NE MODIFIEZ PAS CETTE VALEUR SI VOUS NE COMPRENEZ PAS PARFAITEMENT LES RÉPERCUSSIONS !
+    */
+    'permitted_uri_chars' => 'a-z 0-9~%.:_\-',
 
     /*
     |--------------------------------------------------------------- -------------------------
