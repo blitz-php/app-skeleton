@@ -75,6 +75,11 @@ return [
      * Si VRAI, les segments d'URI multiples correspondants seront passés en un seul paramètre.
      */
     'multiple_segments_one_param' => false,
+    
+    /**
+     * Limite ou non les routes avec l'espace réservé {locale} vers App::$supported_locales.
+     */
+    'use_supported_locales_only' => false,
 
     /**
      * Carte des segments URI et des namespace. Pour l'Auto Routing. 
