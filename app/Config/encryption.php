@@ -9,7 +9,7 @@
 return [
     /**
      * -------------------------------------------------- --------------------
-     * Démarreur de clé de cryptage
+     * Clé de cryptage
      * ------------------------------------------------- -------------------------
      *
      * Si vous utilisez la classe Encryption, vous devez définir une clé de cryptage (seed).
@@ -65,7 +65,7 @@ return [
      * 
      * @var bool
      */
-    'rawData' => true,
+    'raw_data' => true,
 
     /**
      * Informations sur la clé de cryptage.
@@ -73,7 +73,7 @@ return [
      * 
      * @var string
      */
-    'encryptKeyInfo' => '',
+    'encrypt_key_info' => '',
 
     /**
      * Informations sur la clé d'authentification.
@@ -81,7 +81,7 @@ return [
      * 
      * @var string
      */
-    'authKeyInfo' => '',
+    'auth_key_info' => '',
 
     /**
      * Chiffre à utiliser.
