@@ -20,6 +20,15 @@ return [
         'secureheaders' => \BlitzPHP\Middlewares\SecureHeaders::class,
     ],
 
+    'groups' => [
+        'api'   => [],
+        'web'   => [
+            \App\Middlewares\VerifyCsrfToken::class,
+            \BlitzPHP\Middlewares\PerformanceMetrics::class, // Mesures de performances
+            \BlitzPHP\Middlewares\PageCache::class, // Mise en cache des pages Web
+        ],
+    ],
+
     /**
      * Liste des alias de middlewares toujours appliqués à chaque requête.
      * 
@@ -27,8 +36,8 @@ return [
      */
     'globals' => [
         \BlitzPHP\Middlewares\ForceHTTPS::class, // Forcer les requêtes sécurisées globales
-        \BlitzPHP\Middlewares\PageCache::class, // Mise en cache des pages Web
-        \BlitzPHP\Middlewares\PerformanceMetrics::class, // Mesures de performances
+        \App\Middlewares\EncryptCookies::class,
+        'web',
     ],
 
     /**
