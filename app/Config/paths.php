@@ -46,15 +46,6 @@ return [
     
     /**
      * ------------------------------------------------- -------------------------
-     * NOM DU DOSSIER DES TELECHARGEMENTS
-     * ---------------------------------------------------------------
-     *
-     * Repertoire où sont stockés les fichiers téléchargés par les utilisateurs de l'application (images, videos, pdf...)
-     */
-    'upload' => __DIR__ . '/../../uploads/',
-    
-    /**
-     * ------------------------------------------------- -------------------------
      * NOM DU DOSSIER DE COMPOSER
      * ---------------------------------------------------------------
      *
