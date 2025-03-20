@@ -12,10 +12,10 @@ return [
     /**
      * @see 
      */
-    'config_cache_enabled' => true,
+    'config_cache_enabled' => on_prod(),
     
     /**
      * @see 
      */
-    'locator_cache_enabled' => true,
+    'locator_cache_enabled' => on_prod(),
 ];
