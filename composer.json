@@ -37,6 +37,9 @@
         "preferred-install": "dist",
         "sort-packages": true
     },
+    "suggest": {
+        "paragonie/csp-builder": "Constructeur CSP, pour utiliser le middleware CSP"
+    },
     "minimum-stability": "stable",
     "prefer-stable": true
 }
