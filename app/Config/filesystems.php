@@ -15,7 +15,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Filesystem Disks
+    | Disques de système de fichiers
     |--------------------------------------------------------------------------
     |
     | Ici, vous pouvez configurer autant de "disques" de système de fichiers que 
@@ -28,8 +28,8 @@ return [
     'disks' => [
         'local' => [
             'driver' => 'local',
-            'root' => storage_path('app'),
-            'throw' => false,
+            'root'   => storage_path('app'),
+            'throw'  => false,
         ],
 
         'public' => [
@@ -56,14 +56,12 @@ return [
 
     /**
     *--------------------------------------------------------------------------
-    * Liens symbolique
+    * Disques dont les fichiers peuvent être visible
     *--------------------------------------------------------------------------
-    * Ici, vous pouvez configurer les liens symboliques qui seront créés lors de 
-    * l'exécution de la commande Klinge `storage:link`. 
-    * Les clés du tableau doivent être les emplacements des liens et les valeurs doivent être leurs cibles.
+    * Ici, vous pouvez renseigner une liste de disques dont les fichiers peuvent être visible sur un navigateur.
+    * Par exemple, les images d'avatar uploadées dans le disque "public" pourront être affichées dans le navigateur
     */
-    'links' => [
-        public_path('storage') => storage_path('app/public'),
+    'viewable' => [
+		'public',
     ],
-
 ];
