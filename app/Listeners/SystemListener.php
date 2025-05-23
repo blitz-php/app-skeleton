@@ -18,6 +18,7 @@ class SystemListener implements EventListenerInterface
     {
         $manager->on('pre_system', function() {
             $this->addHotReloadRoute();
+			$this->addFileViewerRoute();
         });
     }
 
@@ -29,5 +30,29 @@ class SystemListener implements EventListenerInterface
         service('routes')->environment('dev', function($routes) {
             $routes->get('__hot-reload', static fn () => (new HotReloader())->run());
         });
+    }
+    
+	/**
+     * Definie la route pour l'affichage des fichier
+     */
+    private function addFileViewerRoute()
+    {
+		$config   = config('filesystems');
+		if ([] === $viewable = $config['viewable'] ?? []) {
+			return;
+		}
+
+		$routes = service('routes');
+
+		foreach ($viewable as $disk) {
+			if (! is_string($disk)) {
+				continue;
+			}
+			if ('' === $url = trim(str_replace(config('app.base_url'), '', $config['disks'][$disk]['url'] ?? ''), '/')) {
+				continue;
+			}
+
+			$routes->get($url . '/(:any)', static fn($response) => $response);
+		}
     }
 }
