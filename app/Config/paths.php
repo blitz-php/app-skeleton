@@ -52,6 +52,13 @@ return [
      * Cette variable doit contenir le nom de votre répertoire de tests.
      */
     'test' => __DIR__ . '/../../spec/',
+
+    /**
+     * ---------------------------------------------------------------
+     * NOM DU RÉPERTOIRE DE CONFIGURATION DU BOOTSTRAPING DE L'APP
+     * --------------- ------------------------------------------------
+     */
+    'boot' => __DIR__ . '/../../boot/',
     
     /**
      * ------------------------------------------------- -------------------------

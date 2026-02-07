@@ -14,30 +14,40 @@
  * Outils de ligne de commande BlitzPHP
  * ------------------------------------------------- -------------------
  * Le principal point d'entrée dans le système CLI et vous permet d'exécuter
- * commandes et effectuer la maintenance de votre application.
+ * des commandes et effectuer la maintenance de votre application.
  */
 
 // Refuse de s'exécuter lorsqu'il est appelé depuis php-cgi
 if (strpos(PHP_SAPI, 'cgi') === 0) {
-    exit("The cli tool is not supported when running php-cgi. It needs php-cli to function!\n\n");
+    exit("L'outil CLI n'est pas supporté lors de l'exécution avec php-cgi. Il a besoin de php-cli pour fonctionner !\n\n");
 }
 
 // Nous voulons que les erreurs soient affichées lors de son utilisation à partir de la CLI.
-error_reporting(-1);
+error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-/**
- * @var bool
- */
+
 define('KLINGED', true);
 
-require_once __DIR__ . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR . 'index.php';
+// Chemin vers le contrôleur frontal
+define('WEBROOT', __DIR__ . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR);
 
-// Afficher les informations de base avant de faire quoi que ce soit d'autre.
-if (is_int($suppress = array_search('--no-header', $_SERVER['argv'], true))) {
-    unset($_SERVER['argv'][$suppress]); // @codeCoverageIgnore
-    $suppress = true;
+// S'assure que le répertoire courant pointe vers le répertoire du contrôleur frontal
+chdir(WEBROOT);
+
+// Charge la configuration de nos chemins de répertoires
+// Cette ligne doit être modifiée en fonction de votre structure
+$paths_config_file = realpath(WEBROOT . '../app/Config/paths.php');
+// ^^^ Modifiez cette ligne si vous déplacez votre dossier d'application
+
+$paths = require_once $paths_config_file;
+
+$boot_path = strtr(rtrim($paths['boot'], '/\\'), '/\\', DIRECTORY_SEPARATOR . DIRECTORY_SEPARATOR);
+if (false === $setup_file = realpath($boot_path . DIRECTORY_SEPARATOR . 'setup.php')) {
+    header('HTTP/1.1 503 Service Unavailable.', true, 503);
+    echo 'Votre fichier de démarrage de l\'application ne semble pas être défini correctement. ';
+    echo 'Veuillez ouvrir le fichier "' . $paths_config_file . '" et corriger la clé "boot".';
+    exit(3); // EXIT_CONFIG
 }
-$console = new \BlitzPHP\Cli\Console\Console($suppress);
 
-$console->handle($_SERVER['argv']);
+require_once $setup_file;
