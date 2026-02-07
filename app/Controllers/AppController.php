@@ -19,10 +19,8 @@ abstract class AppController extends BaseController
     /**
      * Un tableau d'helpers à charger automatiquement lors de l'instanciation de la classe.
      * Ces helpers seront disponibles pour tous les autres contrôleurs qui étendent BaseController.
-     *
-     * @var array
      */
-    protected $helpers = [];
+    protected array $helpers = [];
 
     /**
      * Constructeur.

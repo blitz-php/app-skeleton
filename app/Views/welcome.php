@@ -2,7 +2,7 @@
 <html lang="<?= config('app.language', 'fr') ?>">
 <head>
 	<meta charset="UTF-8">
-	<title>Bienvenue sur BlitzPHP <?= \BlitzPHP\Core\Application::VERSION ?></title>
+	<title>Bienvenue sur BlitzPHP <?= BLITZ_CORE_VERSION ?></title>
 	<meta name="description" content="The simplest PHP framework for beginners">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
@@ -225,7 +225,7 @@
 	</div>
 
 	<div class="heroe">
-		<h1>Bienvenue sur BlitzPHP <?= \BlitzPHP\Core\Application::VERSION ?></h1>
+		<h1>Bienvenue sur BlitzPHP <?= BLITZ_CORE_VERSION ?></h1>
 
 		<h2>Un framework simple pour un développement efficace</h2>
 	</div>

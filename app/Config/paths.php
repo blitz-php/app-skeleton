@@ -26,7 +26,7 @@ return [
      * Le dossier peut également être renommé ou déplacé n'importe où sur votre serveur.
      * Si vous le faites, utilisez un chemin de serveur complet.
      *
-    * @var string
+     * @see https://blitz-php.byethost14.com/docs/dev/gerez-vos-applications
      */
     'app' => __DIR__ . '/../',
     
@@ -43,6 +43,15 @@ return [
      * en les gardant hors de l'application et/ou des répertoires système.
      */
     'storage' => __DIR__ . '/../../storage/',
+
+    /**
+     * ---------------------------------------------------------------
+     * NOM DU RÉPERTOIRE DES TESTS
+     * --------------- ------------------------------------------------
+     *
+     * Cette variable doit contenir le nom de votre répertoire de tests.
+     */
+    'test' => __DIR__ . '/../../spec/',
     
     /**
      * ------------------------------------------------- -------------------------
@@ -52,4 +61,15 @@ return [
      * Repertoire votre dossier de dependances installées via composer "vendor".
      */
     'composer' => __DIR__ . '/../../vendor/',
+
+    /**
+     * ---------------------------------------------------------------
+     * NOM DU RÉPERTOIRE ENVIRONNEMENT
+     * ------------- --------------------------------------------------
+     *
+     * Cette variable doit contenir le nom du répertoire où se trouve le fichier .env.
+     * Veuillez tenir compte des implications en matière de sécurité lorsque vous modifiez cette valeur.
+     * Le répertoire ne doit pas être accessible au public.
+     */
+    'env_directory' => __DIR__ . '/../../',
 ];
