@@ -15,7 +15,7 @@
         }
     },
     "require": {
-        "blitz-php/framework": "^0.12"
+        "blitz-php/framework": "^1.0.0-rc"
     },
     "require-dev": {
         "filp/whoops": "^2.15"
